@@ -1,0 +1,311 @@
+/* Import Primer CSS */
+@import "@primer/css/dist/primer.css";
+
+/* --- Variables & Theme Setup --- */
+:root {
+  /* Colors - Professional Dark */
+  --bg-deep: #0d1117;
+  --bg-subtle: #161b22;
+  --text-primary: #e6edf3;
+  --text-secondary: #7d8590;
+
+  /* Accents - Corporate Blue */
+  --accent-primary: #2f81f7;
+  --accent-secondary: #1f6feb;
+  --accent-gradient: linear-gradient(135deg, #2f81f7 0%, #4493f8 100%);
+
+  /* Shadows & Glows - Refined */
+  --glow-soft: 0 4px 12px rgba(0, 0, 0, 0.2);
+  --glow-strong: 0 8px 24px rgba(47, 129, 247, 0.15);
+
+  /* Structure */
+  --hero-height: 100vh;
+  --nav-height: 64px;
+}
+
+#glitter-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  /* Behind everything */
+  pointer-events: none;
+}
+
+/* Shimmer Effect for Interactive Elements */
+.shimmer-element {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-element::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: var(--shimmer-pos, -100%);
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(121, 192, 255, 0.15) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  transform: skewX(-25deg);
+  pointer-events: none;
+  z-index: 2;
+  transition: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--bg-deep);
+}
+
+body {
+  background-color: var(--bg-deep);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  /* Prevent horizontal scroll from animations */
+}
+
+/* --- Typography --- */
+h1,
+h2,
+h3,
+h4,
+.h1,
+.h2,
+.h3,
+.h4 {
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.text-gradient {
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.hero-title {
+  font-size: 4rem;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+}
+
+.section-label {
+  font-family: "SF Mono", "Roboto Mono", monospace;
+  font-size: 0.9rem;
+  color: var(--accent-primary);
+  display: block;
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+/* --- Layout & Structure --- */
+.container-xl {
+  max-width: 1200px;
+}
+
+/* Navbar */
+header.Header {
+  background: rgba(10, 12, 16, 0.8) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(48, 54, 61, 0.5) !important;
+}
+
+.nav-link {
+  color: var(--text-secondary) !important;
+  transition: color 0.2s ease;
+  position: relative;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  color: var(--text-primary) !important;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 20px;
+  height: 2px;
+  background: var(--accent-secondary);
+  transition: transform 0.3s ease;
+}
+
+.nav-link:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+/* --- Components --- */
+
+/* Professional Cards */
+.glass-card {
+  background: #161b22;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  transition: transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(47, 129, 247, 0.4);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), 0 0 12px rgba(47, 129, 247, 0.1);
+}
+
+.project-card {
+  text-decoration: none !important;
+  color: inherit !important;
+  cursor: pointer;
+  display: flex;
+}
+
+.project-card * {
+  pointer-events: none;
+  /* Let the card handle the click */
+}
+
+/* Buttons */
+.btn-primary {
+  background: var(--accent-primary);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: #fff;
+  font-weight: 500;
+  border-radius: 6px;
+  transition: background 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background: var(--accent-secondary);
+  border-color: rgba(255,255,255,0.2);
+  transform: translateY(-1px);
+}
+
+.btn-glow {
+  box-shadow: 0 4px 12px rgba(47, 129, 247, 0.2);
+  transition: box-shadow 0.3s ease;
+}
+
+.btn-glow:hover {
+  box-shadow: 0 6px 16px rgba(47, 129, 247, 0.3);
+}
+
+.btn-outline {
+  color: var(--text-primary);
+  border-color: var(--text-secondary);
+}
+
+.btn-outline:hover {
+  border-color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+
+/* --- Specific Section Styles --- */
+
+/* Ambient Background - Subtle Professional Glow */
+.ambient-glow {
+  position: fixed;
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(47, 129, 247, 0.05) 0%, rgba(0, 0, 0, 0) 60%);
+  top: -200px;
+  left: -200px;
+  z-index: -1;
+  filter: blur(100px);
+  animation: float 30s infinite ease-in-out;
+}
+
+.glow-2 {
+  top: auto;
+  bottom: -200px;
+  left: auto;
+  right: -200px;
+  background: radial-gradient(circle, rgba(47, 129, 247, 0.03) 0%, rgba(0, 0, 0, 0) 60%);
+  animation: float 35s infinite ease-in-out reverse;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(50px, 50px);
+  }
+}
+
+/* Skills */
+.circle-icon {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+/* Experience */
+.experience-glow {
+  background: radial-gradient(circle at top right, rgba(47, 129, 247, 0.08), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.experience-item:hover .experience-glow {
+  opacity: 1;
+}
+
+/* Certifications */
+.cert-item {
+  transition: background-color 0.2s ease;
+}
+
+.cert-item:hover {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* --- Utilities --- */
+.flex-gap-2 {
+  gap: 8px;
+}
+
+.flex-gap-3 {
+  gap: 16px;
+}
+
+.flex-gap-4 {
+  gap: 24px;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.grid-template-columns-1 {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+@media (min-width: 768px) {
+  .grid-template-columns-md-2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

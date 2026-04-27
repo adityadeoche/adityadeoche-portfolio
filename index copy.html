@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en" data-color-mode="auto" data-light-theme="light" data-dark-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Aditya Shivhari Deoche - Java Developer & Backend Engineer" />
+  <title>Aditya Shivhari Deoche | Java Developer Portfolio</title>
+  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+</head>
+
+<body class="color-bg-default color-fg-default">
+
+  <!-- Navbar -->
+  <header class="Header position-sticky top-0 width-full color-bg-default border-bottom border-color-muted z-3"
+    style="transition: all 0.3s ease;">
+    <div class="Header-item Header-item--full">
+      <a href="#" class="Header-link f4 text-bold">Aditya Deoche</a>
+    </div>
+    <div class="Header-item mr-0">
+      <nav class="d-none d-md-flex">
+        <a href="#about" class="Header-link px-2">About</a>
+        <a href="#skills" class="Header-link px-2">Skills</a>
+        <a href="#experience" class="Header-link px-2">Experience</a>
+        <a href="#projects" class="Header-link px-2">Projects</a>
+        <a href="#contact" class="Header-link px-2">Contact</a>
+      </nav>
+      <button id="theme-toggle" class="btn btn-sm btn-invisible ml-2" aria-label="Toggle theme">
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+          class="octicon octicon-moon">
+          <path
+            d="M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z">
+          </path>
+        </svg>
+        <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true"
+          class="octicon octicon-sun d-none">
+          <path
+            d="M8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.5.5 0 01.5.5v2a.5.5 0 01-1 0v-2A.5.5 0 018 0zm0 13a.5.5 0 01.5.5v2a.5.5 0 01-1 0v-2A.5.5 0 018 13zM2.343 2.343a.5.5 0 01.707 0l1.414 1.414a.5.5 0 01-.707.707L2.343 3.05a.5.5 0 010-.707zm11.314 11.314a.5.5 0 010-.707l-1.414-1.414a.5.5 0 01.707-.707l1.414 1.414a.5.5 0 01-.707.707zM2.343 13.657a.5.5 0 01-.707-.707l1.414-1.414a.5.5 0 01.707.707L3.05 13.657zM13.657 2.343a.5.5 0 01-.707.707l-1.414-1.414a.5.5 0 01.707-.707l1.414 1.414zM4 10.5a.5.5 0 01-1 0v-5a.5.5 0 011 0v5zm9-5a.5.5 0 01-1 0v5a.5.5 0 011 0v-5z">
+          </path>
+        </svg>
+      </button>
+      <!-- Mobile Menu Button (implementation in JS if needed, or simple link for now) -->
+      <a href="/assets/resume.pdf" class="btn btn-primary btn-sm ml-3" download>Download Resume</a>
+    </div>
+  </header>
+
+  <main class="font-mktg">
+
+    <!-- Hero Section -->
+    <section id="hero"
+      class="container-xl p-responsive d-flex flex-column flex-justify-center flex-items-start min-vh-100">
+      <div class="hero-content opacity-0" style="transform: translateY(20px);">
+        <h1 class="h0-mktg mb-2 hero-name-gradient">Aditya Shivhari Deoche</h1>
+        <h2 class="f1-light color-fg-muted mb-4">Java Developer | JDBC | SQL | Backend Development</h2>
+        <p class="f3 color-fg-muted mb-6 col-md-8">
+          Electronics & Telecommunication Engineering student (2026) with hands-on experience in Java, JDBC, SQL, and
+          database-driven applications. Built real-world projects including a medicine donation platform, DBMS
+          applications, web tools, and IoT systems. Passionate about backend development and scalable software
+          solutions.
+        </p>
+        <div class="d-flex flex-gap-3">
+          <a href="/assets/resume.pdf" class="btn btn-primary btn-large" download>Download Resume</a>
+          <a href="#projects" class="btn btn-outline btn-large">View Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me -->
+    <section id="about" class="container-xl p-responsive py-6">
+      <h2 class="h1 mb-4 section-title">About Me</h2>
+      <div class="Box p-4 color-shadow-medium">
+        <p class="f4 mb-3">
+          I am a final-year Electronics & Telecommunication Engineering student based in Pune, India.
+          My technical foundation is built on <strong>Java, Object-Oriented Programming (OOP), and Database Management
+            Systems (DBMS)</strong>.
+          I love building efficient backend systems and have practical experience with <strong>JDBC and SQL</strong>.
+        </p>
+        <p class="f4">
+          I am looking for entry-level opportunities as a Java Developer or Backend Engineer where I can apply my skills
+          to solve real-world problems.
+          I value clean code, continuous learning, and contributing to impactful software solutions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="container-xl p-responsive py-6">
+      <h2 class="h1 mb-4 section-title">Skills</h2>
+      <div class="d-flex flex-wrap flex-gap-3" id="skills-container">
+        <!-- Skills injected via JS or static -->
+        <!-- Programming Languages -->
+        <div class="Box p-3 flex-auto col-12 col-md-5 col-lg-3 skill-card element-invisible">
+          <h3 class="h4 mb-2">Programming Languages</h3>
+          <ul class="list-style-none">
+            <li class="d-flex flex-items-center mb-1"><span
+                class="Label mr-2 color-bg-accent-emphasis color-fg-on-emphasis">Java</span> Professional</li>
+            <li class="d-flex flex-items-center mb-1"><span class="Label mr-2 Label--secondary">HTML/CSS</span>
+              Intermediate</li>
+            <li class="d-flex flex-items-center mb-1"><span class="Label mr-2 Label--secondary">JavaScript</span> Basic
+            </li>
+          </ul>
+        </div>
+        <!-- Databases -->
+        <div class="Box p-3 flex-auto col-12 col-md-5 col-lg-3 skill-card element-invisible">
+          <h3 class="h4 mb-2">Databases</h3>
+          <ul class="list-style-none">
+            <li class="d-flex flex-items-center mb-1">MySQL</li>
+            <li class="d-flex flex-items-center mb-1">Oracle SQL</li>
+            <li class="d-flex flex-items-center mb-1">ANSI SQL</li>
+          </ul>
+        </div>
+        <!-- Concepts -->
+        <div class="Box p-3 flex-auto col-12 col-md-5 col-lg-3 skill-card element-invisible">
+          <h3 class="h4 mb-2">Concepts</h3>
+          <ul class="list-style-none">
+            <li class="d-flex flex-items-center mb-1">OOP</li>
+            <li class="d-flex flex-items-center mb-1">DBMS</li>
+            <li class="d-flex flex-items-center mb-1">Data Structures</li>
+            <li class="d-flex flex-items-center mb-1">Foundational AI</li>
+          </ul>
+        </div>
+        <!-- Tools -->
+        <div class="Box p-3 flex-auto col-12 col-md-5 col-lg-3 skill-card element-invisible">
+          <h3 class="h4 mb-2">Tools & Tech</h3>
+          <ul class="list-style-none">
+            <li class="d-flex flex-items-center mb-1">JDBC</li>
+            <li class="d-flex flex-items-center mb-1">Git & GitHub</li>
+            <li class="d-flex flex-items-center mb-1">Figma & Canva</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience" class="container-xl p-responsive py-6">
+      <h2 class="h1 mb-4 section-title">Experience</h2>
+      <div class="TimelineItem pt-0 pb-0">
+        <div class="TimelineItem-badge">
+          <svg class="octicon octicon-briefcase" viewBox="0 0 16 16" version="1.1" width="16" height="16"
+            aria-hidden="true">
+            <path fill-rule="evenodd"
+              d="M7.5 1.75a.75.75 0 011.5 0v1.5h4.75A2.25 2.25 0 0116 5.5v6.5a2.25 2.25 0 01-2.25 2.25H2.25A2.25 2.25 0 010 12V5.5A2.25 2.25 0 012.25 3.25h4.75v-1.5zm.75 3h4.75a.75.75 0 00.75-.75V5.5a.75.75 0 00-.75-.75H3a.75.75 0 00-.75.75v-1.5a.75.75 0 00.75-.75h4.75 0v1.5z">
+            </path>
+          </svg>
+        </div>
+        <div class="TimelineItem-body">
+          <h3 class="h3">Software Trainee Intern</h3>
+          <div class="d-flex flex-justify-between flex-items-center mb-2">
+            <span class="text-bold color-fg-default">Test Yantra Software Solutions Pvt. Ltd. | Pune</span>
+            <span class="color-fg-muted">June 2025 – September 2025</span>
+          </div>
+          <div class="Box p-3 color-bg-subtle">
+            <ul class="ml-3">
+              <li>Worked on <strong>Medic Gift</strong>, an online medicine donation platform.</li>
+              <li>Assisted in authentication modules and database schema design.</li>
+              <li>Hands-on experience with <strong>Java, JDBC, SQL</strong>.</li>
+              <li>Exposure to real-world software development workflows.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="container-xl p-responsive py-6">
+      <h2 class="h1 mb-4 section-title">Projects</h2>
+      <div class="d-flex flex-wrap flex-gap-4 flex-justify-center">
+
+        <!-- Project 1 -->
+        <div class="Box d-flex flex-column project-card element-invisible col-12 col-md-5">
+          <div class="Box-header color-bg-subtle">
+            <h3 class="Box-title pr-3">Medic Gift</h3>
+            <span class="Label Label--accent">Java</span>
+            <span class="Label Label--success">JDBC</span>
+          </div>
+          <div class="Box-body flex-auto">
+            <p class="mb-3">Online Medicine Donation Platform connecting donors with NGOs.</p>
+            <div class="text-small color-fg-muted mb-3">
+              Tech: Java, JDBC, MySQL, SQL, Git/GitHub
+            </div>
+          </div>
+          <div class="Box-footer">
+            <a href="#" class="btn btn-sm btn-outline width-full">View on GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="Box d-flex flex-column project-card element-invisible col-12 col-md-5">
+          <div class="Box-header color-bg-subtle">
+            <h3 class="Box-title pr-3">Tourist Guide DBMS</h3>
+            <span class="Label Label--accent">Java</span>
+            <span class="Label Label--done">MySQL</span>
+          </div>
+          <div class="Box-body flex-auto">
+            <p class="mb-3">Database Management System for managing tourist information and guides.</p>
+            <div class="text-small color-fg-muted mb-3">
+              Tech: Java, JDBC, MySQL, SQL Workbench
+            </div>
+          </div>
+          <div class="Box-footer">
+            <a href="#" class="btn btn-sm btn-outline width-full">View on GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="Box d-flex flex-column project-card element-invisible col-12 col-md-5">
+          <div class="Box-header color-bg-subtle">
+            <h3 class="Box-title pr-3">Resume Generator</h3>
+            <span class="Label Label--attention">Web</span>
+          </div>
+          <div class="Box-body flex-auto">
+            <p class="mb-3">Web-based tool to generate professional resumes dynamically.</p>
+            <div class="text-small color-fg-muted mb-3">
+              Tech: HTML, CSS, JS, Bootstrap, jQuery, Python
+            </div>
+          </div>
+          <div class="Box-footer">
+            <a href="#" class="btn btn-sm btn-outline width-full">View on GitHub</a>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="Box d-flex flex-column project-card element-invisible col-12 col-md-5">
+          <div class="Box-header color-bg-subtle">
+            <h3 class="Box-title pr-3">ESP32 Weather Logger</h3>
+            <span class="Label Label--severe">IoT</span>
+          </div>
+          <div class="Box-body flex-auto">
+            <p class="mb-3">IoT system for logging weather data using MQTT protocol.</p>
+            <div class="text-small color-fg-muted mb-3">
+              Tech: Embedded C, ESP32, MQTT, IoT
+            </div>
+          </div>
+          <div class="Box-footer">
+            <a href="#" class="btn btn-sm btn-outline width-full">View on GitHub</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications" class="container-xl p-responsive py-6">
+      <h2 class="h1 mb-4 section-title">Certifications</h2>
+      <div class="Box color-bg-secondary">
+        <ul class="ActionList">
+          <li class="ActionList-item">
+            <span class="ActionList-content">
+              <span class="ActionList-item-label">SQL (Advanced) – HackerRank</span>
+            </span>
+          </li>
+          <li class="ActionList-item">
+            <span class="ActionList-content">
+              <span class="ActionList-item-label">Getting Started with Enterprise Data Science – IBM</span>
+            </span>
+          </li>
+          <li class="ActionList-item">
+            <span class="ActionList-content">
+              <span class="ActionList-item-label">Introduction to Responsible AI – Google Cloud</span>
+            </span>
+          </li>
+          <li class="ActionList-item">
+            <span class="ActionList-content">
+              <span class="ActionList-item-label">Introduction to Generative AI – Google Cloud</span>
+            </span>
+          </li>
+          <li class="ActionList-item">
+            <span class="ActionList-content">
+              <span class="ActionList-item-label">Oracle Cloud Infrastructure 2025 AI Foundations Associate</span>
+            </span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Leadership -->
+    <section id="leadership" class="container-xl p-responsive py-6">
+      <h2 class="h1 mb-4 section-title">Leadership</h2>
+      <div class="Subhead">
+        <div class="Subhead-heading">Student Welfare Club (SWC)</div>
+        <div class="Subhead-description">Core Member & Event Organizer</div>
+      </div>
+      <p>Organized workshops and technical events. Built leadership, teamwork, and communication skills through active
+        participation and event management.</p>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="container-xl p-responsive py-6 pb-8">
+      <h2 class="h1 mb-4 section-title">Contact</h2>
+      <div class="d-flex flex-wrap flex-gap-3">
+        <div class="Box p-3 flex-auto">
+          <h3 class="h4">Email</h3>
+          <a href="mailto:email@example.com" class="Link--primary">email@example.com</a>
+        </div>
+        <div class="Box p-3 flex-auto">
+          <h3 class="h4">LinkedIn</h3>
+          <a href="#" class="Link--primary">linkedin.com/in/aditya-deoche</a>
+        </div>
+        <div class="Box p-3 flex-auto">
+          <h3 class="h4">GitHub</h3>
+          <a href="#" class="Link--primary">github.com/aditya-deoche</a>
+        </div>
+        <div class="Box p-3 flex-auto">
+          <h3 class="h4">Phone</h3>
+          <span class="color-fg-muted">+91-XXXXXXXXXX</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="py-4 text-center color-fg-muted border-top border-color-muted">
+    <p>&copy; 2026 Aditya Shivhari Deoche. Built with Java, Primer CSS & GSAP.</p>
+  </footer>
+
+  <script type="module" src="/js/main.js"></script>
+</body>
+
+</html>
